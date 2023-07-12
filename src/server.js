@@ -1,7 +1,8 @@
 'use strict'
 const express = require('express')
-const app = express()
-const path = require('path')
+const app = express();
+const cors = require('cors');
+const path = require('path');
 const userRoute = require('./Routes/Users')
 const quizzesRoute = require('./Routes/Quizzes')
 
@@ -10,6 +11,7 @@ const quizzesRoute = require('./Routes/Quizzes')
 app.use(express.static(path.join(__dirname, '/public/')))
 
 // Middleware
+app.use(cors())
 app.use(express.json())
 app.use('/API/users', userRoute)
 app.use('/API/quizzes', quizzesRoute)
