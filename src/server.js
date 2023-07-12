@@ -18,6 +18,6 @@ app.use('*', (req, res) => {
 	res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 // Listening to APIs
-app.listen(8000 || 8000, () =>
+app.listen("https://quizadda-backend.onrender.com", () =>
 	console.log('Listening on Port 8000')
 )
