@@ -20,6 +20,6 @@ app.use('*', (req, res) => {
 	res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 // Listening to APIs
-app.listen(8000 || 8000, () =>
+app.listen(8000, () =>
 	console.log('Listening on Port 8000')
 )
